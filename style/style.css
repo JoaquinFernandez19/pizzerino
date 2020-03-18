@@ -86,9 +86,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 1em;
+  position: relative;
 }
 
 .article__title {
+  position: relative;
   text-align: center;
   line-height: 1.5em;
   width: 100%;
@@ -128,6 +130,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
+  position: relative;
 }
 
 .menu__item {
@@ -175,6 +178,7 @@ body {
       justify-self: center;
   text-align: center;
   margin-bottom: 2vh;
+  position: relative;
 }
 
 .contact .contact-item {
@@ -223,6 +227,46 @@ body {
   color: #ff2222 !important;
 }
 
+@-webkit-keyframes animationIn {
+  0% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@keyframes animationIn {
+  0% {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes animationLeft {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes animationLeft {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
 @media (max-width: 700px) {
   .contact {
     font-size: 2em;
@@ -243,7 +287,7 @@ body {
     width: 90%;
     margin-top: 3vh;
     margin-bottom: 2vh;
-    text-align: justify;
+    text-align: left;
   }
   .header__logo {
     font-size: 2em;
