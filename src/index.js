@@ -8,6 +8,7 @@ import { menuModule } from './menu';
 import { contactModule } from './contact';
 
 let content = document.getElementById('content');
+document.body.style.backgroundImage = "url('img/pizza.jpg')";
 
 //state 1 : home
 //state 2 : menu
