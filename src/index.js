@@ -19,7 +19,10 @@ function pageRender() {
 	let menuBtn = document.querySelector('.menuBtn');
 	let contactBtn = document.querySelector('.contactBtn');
 	let homeBtn = document.getElementById('homeBtn');
-	if (state === 1) content.appendChild(homeModule.article);
+	if (state === 1) {
+		homeModule.article.style.animation = 'animationLeft 0.5s ease';
+		content.appendChild(homeModule.article);
+	}
 
 	//MENU EVENT LISTENER
 	menuBtn.addEventListener('click', () => {
@@ -31,6 +34,7 @@ function pageRender() {
 		if (content.contains(contactModule.contact)) {
 			content.removeChild(contactModule.contact);
 		}
+		menuModule.menu.style.animation = 'animationLeft 0.5s ease';
 		content.appendChild(menuModule.menu);
 		if (state === 2) {
 			menuBtn.classList.add('active');
@@ -47,6 +51,7 @@ function pageRender() {
 		if (content.contains(menuModule.menu)) {
 			content.removeChild(menuModule.menu);
 		}
+		contactModule.contact.style.animation = 'animationLeft 0.5s ease';
 		content.appendChild(contactModule.contact);
 		if (state === 3) {
 			contactBtn.classList.add('active');
